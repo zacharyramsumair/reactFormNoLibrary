@@ -6,7 +6,7 @@ import FormInput from "../Components/FormInput";
 type Props = {};
 
 const Login = (props: Props) => {
-	let { loggedIn } = useLoginContext();
+	let { loggedIn, setLoggedIn} = useLoginContext();
 	let { formData, setFormData } = useFormContext();
 
 	const navigate = useNavigate();
@@ -82,6 +82,10 @@ const Login = (props: Props) => {
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+    console.log(formData)
+    if(setLoggedIn){
+      setLoggedIn(true)
+    }
 	};
 
 	const updateForm = (e: React.FormEvent<HTMLFormElement>) => {
@@ -95,7 +99,7 @@ const Login = (props: Props) => {
 			});
 		}
 
-		console.log(formData);
+		// console.log(formData);
 	};
 
 	return (

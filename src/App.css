@@ -89,19 +89,43 @@ span{
   display: none;
 }
 
-/* input:invalid[focused="true"]{
+input:invalid[focused="true"]{
   border: 1px solid red;
 }
 
 input:invalid[focused="true"] ~ span{
   display: block;
-} */
+}
 
-
-input:invalid{
+/* input:invalid{
   border: 1px solid red;
 }
 
 input:invalid ~ span{
   display: block;
+} */
+
+
+.homeSection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100dvh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url(../src/assets/images/trees.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 2em;
+}
+
+
+.homeSection > div{
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2em;
+  font-size: 1.3rem;
+  border-radius: 10px;
 }

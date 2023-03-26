@@ -6,6 +6,7 @@ type Props = {};
 
 const Home = (props: Props) => {
     let { loggedIn } = useLoginContext();
+    let {formData} = useFormContext()
 
     const navigate = useNavigate()
     useEffect(()=>{
@@ -17,9 +18,14 @@ const Home = (props: Props) => {
 
 
 	return (
-		<section>
-			<div>Home</div>
-			<p>{loggedIn ? "true" : "false"}</p>
+		<section className="homeSection">
+            <div>
+            <h1>Home</h1>
+            <p>Welcome {formData.name}!</p>
+            <p>You are {formData.age} and your email is {formData.email}</p>
+            </div>
+			
+			
 		</section>
 	);
 };
