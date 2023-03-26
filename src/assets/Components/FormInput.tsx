@@ -9,7 +9,8 @@ type Props = {
     required: boolean,
     autoComplete?: string,
     onChange:any,
-    errorMessage:string,
+    errorMessage?:string,
+    pattern?:string
 
     // onChange:React.FormEvent<HTMLFormElement>) => void,
 }

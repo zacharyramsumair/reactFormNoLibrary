@@ -14,16 +14,19 @@
   text-align: center;
 }
 
-h1{
-  font-size: 2.5rem;
-  margin: 0.3em;
+.loginHeader{
+  font-size: 2rem;
+  margin: 0.5em;
 }
+
+
+
 .loginPage {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: auto;
   background: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0.3)
@@ -31,6 +34,7 @@ h1{
     url(../src/assets/images/mountains.jpg);
   background-size: cover;
   background-position: center;
+  padding: 2em;
 }
 
 form{
@@ -78,16 +82,26 @@ label{
 }
 
 span{
-  font-size: 12px;
+  font-size: 0.9rem;
   padding: 3px;
   color: red;
+  text-align: left;
   display: none;
 }
 
-input:invalid[focused="true"]{
+/* input:invalid[focused="true"]{
   border: 1px solid red;
 }
 
 input:invalid[focused="true"] ~ span{
+  display: block;
+} */
+
+
+input:invalid{
+  border: 1px solid red;
+}
+
+input:invalid ~ span{
   display: block;
 }

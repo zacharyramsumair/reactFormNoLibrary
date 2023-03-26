@@ -9,6 +9,7 @@ export interface IFormData{
     confirmPassword: string;
     email:string;
     errorMessage:string;
+    pattern:string
 }
 
 
@@ -20,6 +21,7 @@ const defaultFormData: IFormData = {
     confirmPassword: "",
     email: "",
     errorMessage:"",
+    pattern:""
   };
 
 interface ILoginContext{
